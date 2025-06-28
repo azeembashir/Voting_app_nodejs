@@ -16,4 +16,5 @@ app.use('/user', userRoutes);
 app.use('/candidate', candidateRoutes);
 
 
+
 app.listen(PORT, ()=> console.log('Listening on port 3000'));

@@ -1,0 +1,30 @@
+functionalities:
+1. user signup / signin
+2. see the list of candidates
+3. vote one of the candidate, after voting user can't vote again
+4. there is a route which shows the list of candidate and their live vote counts sorted by their vote count
+5. user data must contain their one unique govt. id proof named: CNIC number
+6. there should be one admin who can only maintain the table of candidate's and he can't be able to vote at all
+7. users can change password
+8. users can only login with thier CNIC number and password.
+
+Routes:
+User authentication:
+    /signup: Post - create a new user account
+    /login: Post - login to an existing account  [CNIC + Password]
+
+Voting:
+    /candidates: Get - get the list of candidates
+    /vote/:electorId: Post - vote for specific candidate
+
+vote count:
+    /vote/counts: Get - get the list of candidate sorted by their vote count
+
+User profile:
+    /profile: Get - get the user profile info
+    /profile/password: put - change the user's password
+
+Admin candidate management:
+    /electors: Post - create a new candidate
+    /electors/:electorId: Put - update the existing candidate
+    /electors/:electorId: Delete - delete candidate from the list.
